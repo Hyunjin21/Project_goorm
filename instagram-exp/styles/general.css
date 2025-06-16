@@ -1,0 +1,49 @@
+*,
+*::after,
+*::before {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+*,
+button,
+input,
+select,
+textarea {
+    font-family: 'Roboto';
+}
+
+body {
+    min-height: 100vh; /*최소한 화면을 꽉채우겠다*/
+    display: flex;
+    flex-direction: column;
+    overflow-y: auto;
+}
+
+img {
+    max-width: 100%;
+
+}
+
+:root {
+    --primary : #FFFFFF;
+    --secondary : #FAFAFA;
+    --border: #DBDBDB;
+
+    --story-border: #C7C7C7;
+
+    --text-dark: #262626;
+    --text-light: #999999;
+}
+
+:root.darkTheme {
+    --primary : #000000;
+    --secondary : #050505;
+    --border: #262626;
+
+    --story-border: #707070;
+
+    --text-dark: #FAFAFA;
+    --text-light: #999999;
+}
