@@ -42,7 +42,7 @@
 
 ---
 
-## 5. 정보 구조도 (Information Architecture)
+## 5. 페이지 구성
 
 ```
 index.html
