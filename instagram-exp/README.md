@@ -67,7 +67,12 @@ index.html
 ## 6. 와이어프레임 및 목업
 
 - Figma 기반으로 레이아웃을 설계 후 HTML/CSS로 구현  
-- SVG 아이콘, 버튼 그룹, 사용자 카드 등 실제 인스타그램과 유사한 컴포넌트 구성 사용  
+- SVG 아이콘, 버튼 그룹, 사용자 카드 등 실제 인스타그램과 유사한 컴포넌트 구성 사용
+![Image](https://github.com/user-attachments/assets/c491c1cb-4ce9-493a-900e-c6bc40da83c6)
+
+![Image](https://github.com/user-attachments/assets/295f5910-c873-47ea-932c-154f16a078dd)
+
+![Image](https://github.com/user-attachments/assets/feb89357-04fb-4f87-82f9-f109d3575ce3)
 
 ---
 
