@@ -61,7 +61,7 @@ index.html
 ## 6. 와이어프레임 및 목업
 
 - Figma로 와이어프레임을 작성 후 HTML/CSS로 구현함
-![Image](https://github.com/user-attachments/assets/3ed31e57-f6a7-432c-890a-f4d73b8e9cc6)
+<img src="https://github.com/user-attachments/assets/3ed31e57-f6a7-432c-890a-f4d73b8e9cc6" width="50%" />
 
 - 실제 유튜브와 유사한 구조와 디자인으로 구성 (하단 반응형 이미지)
 ![Image](https://github.com/user-attachments/assets/bfb8f165-a822-4df0-bd8e-696c8a0ae229)
