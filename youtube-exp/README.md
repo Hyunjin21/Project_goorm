@@ -66,7 +66,7 @@ index.html
 - 실제 유튜브와 유사한 구조와 디자인으로 구성 (하단 반응형 이미지)
 ![Image](https://github.com/user-attachments/assets/bfb8f165-a822-4df0-bd8e-696c8a0ae229)
 
-![Image](https://github.com/user-attachments/assets/b0348caf-b3a7-4aa0-993b-00fa1a22b877)
+<img src="https://github.com/user-attachments/assets/b0348caf-b3a7-4aa0-993b-00fa1a22b877" width="50%" />
 
 ---
 
