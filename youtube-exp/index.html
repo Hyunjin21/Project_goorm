@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>youtube-exp</title>
+    <link rel="stylesheet" href="styles/general.css">
+    <link rel="stylesheet" href="styles/header.css">
+    <link rel="stylesheet" href="styles/video.css">
+    <link rel="stylesheet" href="styles/sidebar.css">
+</head>
+<body>
+    <header class="header">
+        <div class="left-section">
+            <img class="hamburger-menu" src="assets/icons/hamburger-menu.svg" alt="햄버거 메뉴" />
+            <img class="youtube-logo" src="assets/icons/youtube-logo.svg" alt="유튜브 로고" />
+        </div>
+        <div class="middle-section">
+            <input class="search-bar" type="text" placeholder="Search..."/>
+            <button class="search-button">
+                <img class="search-icon" src="assets/icons/search.svg" alt="서치 아이콘" />
+                <div class="tooltip">Search</div>
+            </button>
+            <button class="voice-search-button">
+                <img class="voice-search-icon" src="assets/icons/voice-search-icon.svg" alt="보이스 서치 아이콘" />
+                <div class="tooltip">Search with your voice</div>
+            </button>
+        </div>
+        <div class="right-section">
+            <div class="upload-icon-container">
+                <img class="upload-icon" src="assets/icons/upload.svg" alt="업로드 아이콘" />
+                <div class="tooltip">Create</div>
+            </div>
+            <img class="youtube-apps-icon" src="assets/icons/youtube-apps.svg" alt="유튜브 앱 아이콘" />
+            <div class="notifications-icon-container">
+                <img class="notifications-icon" src="assets/icons/notifications.svg" alt="알림 아이콘" />
+                <div class="notifications-count">1</div>
+            </div>
+            <img class="current-user-picture" src="assets/images/avatars/avatar-1.png" alt="유저 이미지" />
+        </div>
+    </header>
+
+    <nav class="sidebar">
+        <div class="sidebar-link">
+            <img src="assets/icons/home.svg" alt="홈" />
+            <div>Home</div>
+        </div>
+        <div class="sidebar-link">
+            <img src="assets/icons/explore.svg" alt="탐색" />
+            <div>Explore</div>
+        </div>
+        <div class="sidebar-link">
+            <img src="assets/icons/subscriptions.svg" alt="구독" />
+            <div>Subscriptions</div>
+        </div>
+        <div class="sidebar-link">
+            <img src="assets/icons/originals.svg" alt="오리지널" />
+            <div>Originals</div>
+        </div>
+        <div class="sidebar-link">
+            <img src="assets/icons/youtube-music.svg" alt="유튜브뮤직" />
+            <div>Youtube Music</div>
+        </div>
+        <div class="sidebar-link">
+            <img src="assets/icons/library.svg" alt="라이브러리" />
+            <div>Library</div>
+        </div>
+    </nav>
+
+    <main>
+        <section class="video-grid">
+            <div class="video-preview">
+                <div class="thumbnail-row">
+                    <img class="thumbnail" src="assets/images/thumbnails/thumbnail-1.jpeg" alt="썸네일1" />
+                    <div class="video-time">8:20</div>
+                </div>
+                <div class="video-info-grid">
+                    <div class="channel-picture">
+                        <img class="profile-picture" src="assets/images/avatars/avatar-1.png" alt="아바타" />
+                    </div>
+                    <div class="video-info">
+                        <p class="video-title">
+                            아름다운 풍경(1)
+                        </p>
+                        <p class="video-author">
+                            아이디(1)
+                        </p>
+                        <p class="video-stats">
+                            3 views &#183; 5 months ago
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="video-preview">
+                <div class="thumbnail-row">
+                    <img class="thumbnail" src="assets/images/thumbnails/thumbnail-2.jpeg" alt="썸네일2" />
+                    <div class="video-time">2:22</div>
+                </div>
+                <div class="video-info-grid">
+                    <div class="channel-picture">
+                        <img class="profile-picture" src="assets/images/avatars/avatar-1.png" alt="아바타" />
+                    </div>
+                    <div class="video-info">
+                        <p class="video-title">
+                            아름다운 풍경(2)
+                        </p>
+                        <p class="video-author">
+                            아이디(2)
+                        </p>
+                        <p class="video-stats">
+                            19 views &#183; 4 years ago
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="video-preview">
+                <div class="thumbnail-row">
+                    <img class="thumbnail" src="assets/images/thumbnails/thumbnail-3.jpeg" alt="썸네일3" />
+                    <div class="video-time">7:07</div>
+                </div>
+                <div class="video-info-grid">
+                    <div class="channel-picture">
+                        <img class="profile-picture" src="assets/images/avatars/avatar-1.png" alt="아바타" />
+                    </div>
+                    <div class="video-info">
+                        <p class="video-title">
+                            아름다운 풍경(3)
+                        </p>
+                        <p class="video-author">
+                            아이디(3)
+                        </p>
+                        <p class="video-stats">
+                            12M views &#183; 1 year ago
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="video-preview">
+                <div class="thumbnail-row">
+                    <img class="thumbnail" src="assets/images/thumbnails/thumbnail-4.jpeg" alt="썸네일4" />
+                    <div class="video-time">9:09</div>
+                </div>
+                <div class="video-info-grid">
+                    <div class="channel-picture">
+                        <img class="profile-picture" src="assets/images/avatars/avatar-1.png" alt="아바타" />
+                    </div>
+                    <div class="video-info">
+                        <p class="video-title">
+                            아름다운 풍경(4)
+                        </p>
+                        <p class="video-author">
+                            아이디(4)
+                        </p>
+                        <p class="video-stats">
+                            18 views &#183; 4 months ago
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="video-preview">
+                <div class="thumbnail-row">
+                    <img class="thumbnail" src="assets/images/thumbnails/thumbnail-5.jpeg" alt="썸네일5" />
+                    <div class="video-time">8:32</div>
+                </div>
+                <div class="video-info-grid">
+                    <div class="channel-picture">
+                        <img class="profile-picture" src="assets/images/avatars/avatar-1.png" alt="아바타" />
+                    </div>
+                    <div class="video-info">
+                        <p class="video-title">
+                            아름다운 풍경(5)
+                        </p>
+                        <p class="video-author">
+                            아이디(5)
+                        </p>
+                        <p class="video-stats">
+                            519 views &#183; 5 years ago
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="video-preview">
+                <div class="thumbnail-row">
+                    <img class="thumbnail" src="assets/images/thumbnails/thumbnail-6.jpeg" alt="썸네일6" />
+                    <div class="video-time">2:31</div>
+                </div>
+                <div class="video-info-grid">
+                    <div class="channel-picture">
+                        <img class="profile-picture" src="assets/images/avatars/avatar-1.png" alt="아바타" />
+                    </div>
+                    <div class="video-info">
+                        <p class="video-title">
+                            아름다운 풍경(6)
+                        </p>
+                        <p class="video-author">
+                            아이디(6)
+                        </p>
+                        <p class="video-stats">
+                            141 views &#183; 1 year ago
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="video-preview">
+                <div class="thumbnail-row">
+                    <img class="thumbnail" src="assets/images/thumbnails/thumbnail-7.jpeg" alt="썸네일7" />
+                    <div class="video-time">1:11</div>
+                </div>
+                <div class="video-info-grid">
+                    <div class="channel-picture">
+                        <img class="profile-picture" src="assets/images/avatars/avatar-1.png" alt="아바타" />
+                    </div>
+                    <div class="video-info">
+                        <p class="video-title">
+                            아름다운 풍경(7)
+                        </p>
+                        <p class="video-author">
+                            아이디(7)
+                        </p>
+                        <p class="video-stats">
+                            141 views &#183; 1 year ago
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="video-preview">
+                <div class="thumbnail-row">
+                    <img class="thumbnail" src="assets/images/thumbnails/thumbnail-8.jpeg" alt="썸네일8" />
+                    <div class="video-time">3:22</div>
+                </div>
+                <div class="video-info-grid">
+                    <div class="channel-picture">
+                        <img class="profile-picture" src="assets/images/avatars/avatar-1.png" alt="아바타" />
+                    </div>
+                    <div class="video-info">
+                        <p class="video-title">
+                            아름다운 풍경(8)
+                        </p>
+                        <p class="video-author">
+                            아이디(8)
+                        </p>
+                        <p class="video-stats">
+                            141 views &#183; 1 year ago
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="video-preview">
+                <div class="thumbnail-row">
+                    <img class="thumbnail" src="assets/images/thumbnails/thumbnail-1.jpeg" alt="썸네일1" />
+                    <div class="video-time">7:20</div>
+                </div>
+                <div class="video-info-grid">
+                    <div class="channel-picture">
+                        <img class="profile-picture" src="assets/images/avatars/avatar-1.png" alt="아바타" />
+                    </div>
+                    <div class="video-info">
+                        <p class="video-title">
+                            아름다운 풍경(9)
+                        </p>
+                        <p class="video-author">
+                            아이디(9)
+                        </p>
+                        <p class="video-stats">
+                            25 views &#183; 5 hours ago
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="video-preview">
+                <div class="thumbnail-row">
+                    <img class="thumbnail" src="assets/images/thumbnails/thumbnail-2.jpeg" alt="썸네일2" />
+                    <div class="video-time">6:25</div>
+                </div>
+                <div class="video-info-grid">
+                    <div class="channel-picture">
+                        <img class="profile-picture" src="assets/images/avatars/avatar-1.png" alt="아바타" />
+                    </div>
+                    <div class="video-info">
+                        <p class="video-title">
+                            아름다운 풍경(10)
+                        </p>
+                        <p class="video-author">
+                            아이디(10)
+                        </p>
+                        <p class="video-stats">
+                            25 views &#183; 5 hours ago
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+</body>
+</html>
