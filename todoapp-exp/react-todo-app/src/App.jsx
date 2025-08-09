@@ -4,7 +4,7 @@ import Lists from "./components/Lists";
 import Form from "./components/Form";
 import api from "./api/axios";
 
-// 서버 → 클라 정규화
+// 서버에서 받은 데이터 → 클라이언트 정규화
 const adaptFromServer = (t) => ({
   id: t.id ?? t._id,                 // 서버(_id) or 이미 정규화된(id)
   title: t.title,
@@ -17,12 +17,12 @@ export default function App() {
   const [todoData, setTodoData] = useState([]);
   const [value, setValue] = useState("");
 
-  // localStorage 동기화(옵션: 중복 제거)
+  // localStorage 동기화(새로고침시 유지)
   useEffect(() => {
     localStorage.setItem("todoData", JSON.stringify(todoData));
   }, [todoData]);
 
-  // 1) 최초 렌더 시 목록 불러오기 (GET /api/todos)
+  // 최초 렌더 시 서버에서 할 일 목록 불러오기 (GET /api/todos)
   useEffect(() => {
     (async () => {
       try {
@@ -37,21 +37,20 @@ export default function App() {
     })();
   }, []);
 
-  // 2) 추가 (POST /api/todos)
+  // 새로운 할 일을 추가 (POST /api/todos)
   const handleSubmit = async (e) => {
     e.preventDefault();
     const title = value.trim();
     if (!title) return;
 
     try {
-      // 백엔드는 title만 사용
       const { data: created } = await api.post("/api/todos", { title });
       const item = adaptFromServer(created);
       setTodoData((prev) => [...prev, item]);
       setValue("");
     } catch (e) {
       console.error("POST /api/todos failed:", e.response?.status, e.response?.data);
-      // (선택) 낙관적 임시 항목
+      // 서버에 실패해도 임시로 목록에 표시 (낙관적 업데이트)
       const temp = { id: String(Date.now()), title, completed: false };
       setTodoData((prev) => [...prev, temp]);
       setValue("");

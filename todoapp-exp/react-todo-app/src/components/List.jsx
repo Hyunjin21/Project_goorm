@@ -1,7 +1,7 @@
 import { useState } from "react";
 import api from "../api/axios";
 
-// 24자 hex(ObjectId)만 서버 호출(옛 로컬 항목 404 방지)
+// 서버 ObjectId 형식(24자리 hex 문자열)인지 확인(옛 로컬 항목 404 방지)
 const isObjectId = (v) => typeof v === "string" && /^[0-9a-fA-F]{24}$/.test(v);
 
 export default function List({ title, completed, id, todoData, setTodoData }) {
@@ -25,7 +25,7 @@ export default function List({ title, completed, id, todoData, setTodoData }) {
     opacity: busy ? 0.6 : 1,
   });
 
-  // 삭제: DELETE /api/todos/:id
+  // 삭제 기능 (DELETE /api/todos/:id)
   const handleDelete = async () => {
     if (busy) return;
     setBusy(true);
@@ -49,7 +49,7 @@ export default function List({ title, completed, id, todoData, setTodoData }) {
     }
   };
 
-  // 완료 토글: PUT /api/todos/:id  (백엔드는 title+done 받음)
+  // 완료 토글 (PUT /api/todos/:id) 
   const handleCompleteChange = async () => {
     if (busy) return;
     setBusy(true);
@@ -67,6 +67,7 @@ export default function List({ title, completed, id, todoData, setTodoData }) {
     localStorage.setItem("todoData", JSON.stringify(next));
 
     try {
+      // 서버에도 완료 상태 업데이트 (ObjectId만)
       if (isObjectId(id)) {
         await api.put(`/api/todos/${id}`, {
           title: target.title,
@@ -83,9 +84,10 @@ export default function List({ title, completed, id, todoData, setTodoData }) {
     }
   };
 
+  // 입력창 값 변경 시
   const handleEditChange = (e) => setEditedTitle(e.target.value);
 
-  // 제목 수정: PUT /api/todos/:id  (백엔드는 title+done 받음)
+  // 제목 수정 (PUT /api/todos/:id) 
   const handleSubmit = async (e) => {
     e.preventDefault();
     if (busy) return;
@@ -101,6 +103,7 @@ export default function List({ title, completed, id, todoData, setTodoData }) {
     localStorage.setItem("todoData", JSON.stringify(next));
 
     try {
+      // 서버에도 수정 요청 (ObjectId만)
       if (isObjectId(id)) {
         await api.put(`/api/todos/${id}`, {
           title: trimmed,
@@ -118,6 +121,7 @@ export default function List({ title, completed, id, todoData, setTodoData }) {
     }
   };
 
+  // 수정 모드 UI
   if (isEditing) {
     return (
       <form style={getStyle(completed)} onSubmit={handleSubmit}>
@@ -137,6 +141,7 @@ export default function List({ title, completed, id, todoData, setTodoData }) {
     );
   }
 
+  // 일반 모드 UI
   return (
     <div style={getStyle(completed)}>
       <input

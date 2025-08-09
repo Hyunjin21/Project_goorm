@@ -4,7 +4,7 @@ export default function Lists({ todoData, setTodoData }) {
   return (
     <div>
       {todoData.map((data) => {
-        // 서버/로컬 혼재 대응 (필드 정규화)
+        // 데이터 정규화
         const id = data.id ?? data._id;
         const completed = data.completed ?? data.done ?? false;
 
